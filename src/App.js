@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
+import {  BrowserRouter as Router, Route, Switch, withRouter, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+// import * as actions from "./store/actions/index";
 import './App.css';
+import { auth } from "./firebase";
 
 function App() {
-  return (
+
+	return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route path="/checkout"/>
+        <Route path="/checkout"/>
+        <Route path="/checkout"/>
+        <Route path="/checkout"/>
+        <Route path="/checkout"/>
+      </Switch>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+
+  }
+}
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
