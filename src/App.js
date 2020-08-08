@@ -10,11 +10,11 @@ function App() {
 	return (
     <div className="App">
       <Switch>
+        {/* <Route path="/checkout"/>
         <Route path="/checkout"/>
         <Route path="/checkout"/>
-        <Route path="/checkout"/>
-        <Route path="/checkout"/>
-        <Route path="/checkout"/>
+        <Route path="/checkout"/> */}
+        <Route path="/" exact component={MainPage}/>
       </Switch>
     </div>
   );
