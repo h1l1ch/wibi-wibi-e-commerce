@@ -1,38 +1,169 @@
-.App {
-  text-align: center;
+.navigation-login {
+  background-color: #333333;
+  color: #f2f2f2;
+  grid-column: 1/end;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navigation-login ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  float: right;
+  margin: 0rem;
 }
 
-.App-link {
-  color: #61dafb;
+@media (min-width: 1440px) {
+  .navigation-login {
+    font-size: 1.8rem;
+  }
+  .navigation-login ul {
+    margin-right: 5rem;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 415px) and (max-width: 1439px) {
+  .navigation-login {
+    font-size: 1.6rem;
   }
-  to {
-    transform: rotate(360deg);
+  .navigation-login ul {
+    margin-right: 5rem;
   }
 }
+
+@media (max-width: 414px) {
+  .navigation-login {
+    font-size: 1.4rem;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+  }
+  .navigation-login ul {
+    margin-right: 2.5rem;
+    padding: 0.1rem 0;
+  }
+  .navigation-login ul li:first-of-type {
+    margin-right: 4rem;
+  }
+}
+
+.navigation-logo {
+  background-color: #f2f2f2;
+  color: #333333;
+  grid-column: 1/end;
+}
+
+.navigation-logo ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  vertical-align: center;
+}
+
+.navigation-logo ul li {
+  display: inline-block;
+}
+
+.navigation-logo .navigation-logo__basket-icon {
+  font-size: 3rem;
+  float: left;
+}
+
+.navigation-logo .navigation-logo__logo {
+  text-align: center;
+  font-weight: 700;
+}
+
+.navigation-logo .navigation-logo__burger-icon {
+  font-size: 3rem;
+  float: right;
+}
+
+@media (min-width: 1440px) {
+  .navigation-logo {
+    font-size: 1.8rem;
+  }
+  .navigation-logo ul {
+    margin-right: 5rem;
+  }
+}
+
+@media (min-width: 415px) and (max-width: 1439px) {
+  .navigation-logo {
+    font-size: 1.6rem;
+  }
+  .navigation-logo ul {
+    margin-right: 5rem;
+  }
+}
+
+@media (max-width: 414px) {
+  .navigation-logo {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 6;
+    grid-row: 3/9;
+    padding: 1.5rem 0;
+  }
+  .navigation-logo .navigation-logo__basket-icon {
+    font-size: 3rem;
+    margin-left: 2.5rem;
+  }
+  .navigation-logo .navigation-logo__logo {
+    font-size: 3.4rem;
+  }
+  .navigation-logo .navigation-logo__burger-icon {
+    font-size: 3rem;
+    margin-right: 2.5rem;
+  }
+}
+
+html {
+  background-color: #fff;
+  color: #555;
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 62.5%;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat";
+}
+
+.App {
+  display: -ms-grid;
+  display: grid;
+}
+
+@media (min-width: 1440px) {
+  .App {
+    background-color: red;
+    -ms-grid-columns: [first] 3rem (2rem [col-start] auto [col-end] 2rem)[12] 5rem [end];
+        grid-template-columns: [first] 3rem repeat(12, 2rem [col-start] auto [col-end] 2rem) 5rem [end];
+    -ms-grid-rows: ([row-start] 1.2rem [row-end])[100];
+        grid-template-rows: repeat(100, [row-start] 1.2rem [row-end]);
+  }
+}
+
+@media (min-width: 415px) and (max-width: 1439px) {
+  .App {
+    background-color: blue;
+    -ms-grid-columns: [first] 1.75rem (0.75rem [col-start] auto [col-end] 0.75rem)[12] 2.5rem [end];
+        grid-template-columns: [first] 1.75rem repeat(12, 0.75rem [col-start] auto [col-end] 0.75rem) 2.5rem [end];
+    -ms-grid-rows: ([row-start] 1.2rem [row-end])[100];
+        grid-template-rows: repeat(100, [row-start] 1.2rem [row-end]);
+  }
+}
+
+@media (max-width: 414px) {
+  .App {
+    background-color: green;
+    -ms-grid-columns: [first] 1.75rem (0.75rem [col-start] auto [col-end] 0.75rem)[4] 2.5rem [end];
+        grid-template-columns: [first] 1.75rem repeat(4, 0.75rem [col-start] auto [col-end] 0.75rem) 2.5rem [end];
+    -ms-grid-rows: ([row-start] 1.2rem [row-end])[100];
+        grid-template-rows: repeat(100, [row-start] 1.2rem [row-end]);
+  }
+}
+/*# sourceMappingURL=App.css.map */

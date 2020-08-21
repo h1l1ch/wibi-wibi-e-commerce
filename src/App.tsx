@@ -3,9 +3,10 @@ import {  BrowserRouter as Router, Route, Switch, withRouter, Redirect } from "r
 import { connect } from "react-redux";
 // import * as actions from "./store/actions/index";
 import './App.css';
+import MainPage from './MainPage'
 import { auth } from "./firebase";
 
-function App() {
+const App: React.FC = () => {
 
 	return (
     <div className="App">
@@ -20,13 +21,13 @@ function App() {
   );
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state?: number) => {
   return {
 
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch?: number) => {
   return {
 
   }

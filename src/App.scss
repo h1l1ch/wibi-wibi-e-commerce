@@ -1,0 +1,44 @@
+// Imports
+@import './mixins';
+@import './variables';
+@import './NavigationLogin';
+@import './NavigationLogo';
+
+html {
+  background-color: #fff;
+  color: #555;
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 62.5%;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat"
+}
+
+.App {
+  display: grid;
+  
+  @include desktop {    
+    @include gridTemplate(12, 5rem, 4.0rem, red);
+  }
+
+  @include tablet {    
+    @include gridTemplate(12, 2.5rem, 1.5rem, blue);
+  }
+
+  @include phone {    
+    @include gridTemplate(4, 2.5rem, 1.5rem, green);
+  }
+}
+
+
+
+
+
+
+
+
+

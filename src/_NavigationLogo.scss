@@ -1,0 +1,70 @@
+@import './variables';
+
+.navigation-logo {
+    background-color: $colorWhitish;
+    color: $colorBlackish;
+    grid-column: 1/end;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 100%;
+        height: 100%;
+        vertical-align: center;
+
+        li {
+            display: inline-block;
+        }
+    }
+
+    .navigation-logo__basket-icon {
+        font-size: $icon;
+        float: left;     
+    }
+
+    .navigation-logo__logo {
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .navigation-logo__burger-icon {
+        font-size: $icon;
+        float: right;
+    }
+
+    @include desktop {    
+        font-size: 1.8rem;
+
+        ul {
+            margin-right: 5rem;
+        };
+    }
+
+    @include tablet {    
+        font-size: 1.6rem;
+
+        ul {
+            margin-right: 5rem;
+        };
+    }
+
+    @include phone {
+        grid-row: 3/9;
+        padding: 1.5rem 0;    
+
+        .navigation-logo__basket-icon {
+            font-size: $icon;
+            margin-left: 2.5rem;        
+        }
+    
+        .navigation-logo__logo {
+            font-size: 3.4rem;
+        }
+    
+        .navigation-logo__burger-icon {
+            font-size: $icon;
+            margin-right: 2.5rem;
+        }
+    };
+};
