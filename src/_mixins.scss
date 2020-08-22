@@ -2,26 +2,40 @@
 
 // MXINS
 
+// Nicely centered background image
+@mixin centeredBackgroundImage() {
+    width: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 // Grid Template 
 @mixin gridTemplate($numberOfColumns, $margin, $gutter, $backgroundColor) {
     background-color: $backgroundColor;
     grid-template-columns: [first] $margin - $gutter / 2 repeat($numberOfColumns, $gutter / 2 [col-start] auto [col-end] $gutter / 2) $margin [end];
-    grid-template-rows: repeat(100, [row-start] 1.2rem [row-end]);;
+    grid-template-rows: repeat(100, [row-start] 1.2rem [row-end]);
 }
 
 @mixin phone {
+    font-size: $phone-font-size;
+
     @media (max-width: $tablet-width - 1px) {
         @content;
     }
 }
 
 @mixin tablet {
+    font-size: $tablet-font-size;
+
     @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
         @content;
     }
 }
 
 @mixin desktop {
+    font-size: $desktop-font-size;
+
     @media (min-width: $desktop-width) {
         @content;
     }

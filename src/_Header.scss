@@ -1,0 +1,19 @@
+@import './variables';
+
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.905)), url(img/Header.jpg);
+    @include centeredBackgroundImage();
+
+    grid-column: 1/end;
+    color: $colorWhitish;
+
+    @include desktop {    
+    }
+
+    @include tablet {    
+    }
+
+    @include phone {    
+        grid-row: 9/49;
+    };
+};

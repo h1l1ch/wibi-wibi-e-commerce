@@ -2,6 +2,9 @@
   background-color: #333333;
   color: #f2f2f2;
   grid-column: 1/end;
+  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .navigation-login ul {
@@ -13,18 +16,12 @@
 }
 
 @media (min-width: 1440px) {
-  .navigation-login {
-    font-size: 1.8rem;
-  }
   .navigation-login ul {
     margin-right: 5rem;
   }
 }
 
 @media (min-width: 415px) and (max-width: 1439px) {
-  .navigation-login {
-    font-size: 1.6rem;
-  }
   .navigation-login ul {
     margin-right: 5rem;
   }
@@ -32,14 +29,13 @@
 
 @media (max-width: 414px) {
   .navigation-login {
-    font-size: 1.4rem;
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     grid-row: 1/3;
   }
   .navigation-login ul {
     margin-right: 2.5rem;
-    padding: 0.1rem 0;
+    padding: 0.2rem 0;
   }
   .navigation-login ul li:first-of-type {
     margin-right: 4rem;
@@ -50,6 +46,9 @@
   background-color: #f2f2f2;
   color: #333333;
   grid-column: 1/end;
+  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .navigation-logo ul {
@@ -66,7 +65,6 @@
 }
 
 .navigation-logo .navigation-logo__basket-icon {
-  font-size: 3rem;
   float: left;
 }
 
@@ -76,23 +74,16 @@
 }
 
 .navigation-logo .navigation-logo__burger-icon {
-  font-size: 3rem;
   float: right;
 }
 
 @media (min-width: 1440px) {
-  .navigation-logo {
-    font-size: 1.8rem;
-  }
   .navigation-logo ul {
     margin-right: 5rem;
   }
 }
 
 @media (min-width: 415px) and (max-width: 1439px) {
-  .navigation-logo {
-    font-size: 1.6rem;
-  }
   .navigation-logo ul {
     margin-right: 5rem;
   }
@@ -106,15 +97,42 @@
     padding: 1.5rem 0;
   }
   .navigation-logo .navigation-logo__basket-icon {
-    font-size: 3rem;
-    margin-left: 2.5rem;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    margin-right: 0rem;
+    margin-left: 2rem;
   }
   .navigation-logo .navigation-logo__logo {
+    margin-left: 2rem;
     font-size: 3.4rem;
   }
   .navigation-logo .navigation-logo__burger-icon {
-    font-size: 3rem;
-    margin-right: 2.5rem;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    margin-right: 2rem;
+    margin-left: 0rem;
+  }
+}
+
+.header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.905))), url(img/Header.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.905)), url(img/Header.jpg);
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  grid-column: 1/end;
+  color: #f2f2f2;
+  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 414px) {
+  .header {
+    -ms-grid-row: 9;
+    -ms-grid-row-span: 40;
+    grid-row: 9/49;
   }
 }
 
@@ -135,6 +153,9 @@ body {
 .App {
   display: -ms-grid;
   display: grid;
+  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 @media (min-width: 1440px) {
