@@ -1,4 +1,22 @@
+.main-page {
+  display: -ms-grid;
+  display: grid;
+  background-color: #f2f2f2;
+  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 414px) {
+  .main-page {
+    -ms-grid-rows: 2.5rem 7rem auto auto auto 96rem 12rem;
+        grid-template-rows: 2.5rem 7rem auto auto auto 96rem 12rem;
+        grid-template-areas: "navLogin" "navLogo" "header" "featured" "promotion" "about" "footer";
+  }
+}
+
 .navigation-login {
+  grid-area: navLogin;
   background-color: #333333;
   color: #f2f2f2;
   grid-column: 1/end;
@@ -28,11 +46,6 @@
 }
 
 @media (max-width: 414px) {
-  .navigation-login {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    grid-row: 1/3;
-  }
   .navigation-login ul {
     margin-right: 2.5rem;
     padding: 0.2rem 0;
@@ -43,6 +56,7 @@
 }
 
 .navigation-logo {
+  grid-area: navLogo;
   background-color: #f2f2f2;
   color: #333333;
   grid-column: 1/end;
@@ -94,9 +108,6 @@
 
 @media (max-width: 414px) {
   .navigation-logo {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 6;
-    grid-row: 3/9;
     padding: 1.8rem 0;
   }
   .navigation-logo .navigation-logo__basket-icon {
@@ -118,12 +129,14 @@
 }
 
 .header-section {
+  grid-area: header;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.905))), url(img/Header.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.905)), url(img/Header.jpg);
   background-color: #6c5c4a;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: cover;
   grid-column: 1/end;
   color: #f2f2f2;
   display: -webkit-box;
@@ -155,11 +168,6 @@
 }
 
 @media (max-width: 414px) {
-  .header-section {
-    -ms-grid-row: 9;
-    -ms-grid-row-span: 40;
-    grid-row: 9/49;
-  }
   .header-section .header-section__title {
     margin-top: 20rem;
     margin-left: 2rem;
@@ -170,11 +178,12 @@
     margin-left: 2rem;
     font-size: 1.8rem;
     padding: 0.8rem 1rem;
+    margin-bottom: 2rem;
   }
 }
 
 .featured-section {
-  background-color: #f2f2f2;
+  grid-area: featured;
   color: #333333;
   grid-column: 1/end;
   display: -webkit-box;
@@ -204,11 +213,6 @@
 }
 
 @media (max-width: 414px) {
-  .featured-section {
-    -ms-grid-row: 49;
-    -ms-grid-row-span: 81;
-    grid-row: 49/130;
-  }
   .featured-section .featured-section__row {
     margin: 0 2rem;
     -ms-grid-columns: 1fr 1fr;
@@ -303,12 +307,14 @@
 }
 
 .promotion-section {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.905))), url(img/zara-stylish-photo.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.905)), url(img/zara-stylish-photo.jpg);
+  grid-area: promotion;
+  background-image: url(img/zara-stylish-photo.jpg);
   background-color: #6c5c4a;
+  background-attachment: fixed;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: cover;
   grid-column: 1/end;
   color: #f2f2f2;
   font-size: 1.8rem;
@@ -317,21 +323,17 @@
 }
 
 .promotion-section .promotion-section__title {
-  font-weight: 400;
+  background-color: rgba(51, 51, 51, 0.5);
+  font-weight: 300;
   display: inline-block;
   width: 90%;
 }
 
 @media (max-width: 414px) {
-  .promotion-section {
-    -ms-grid-row: 131;
-    -ms-grid-row-span: 21;
-    grid-row: 131/152;
-  }
-  .promotion-section .header-section__title {
+  .promotion-section .promotion-section__title {
+    font-size: 3.4rem;
     margin-top: 20rem;
     margin-left: 2rem;
-    font-size: 300rem;
   }
 }
 
@@ -350,40 +352,8 @@ body {
 }
 
 .App {
-  display: -ms-grid;
-  display: grid;
   font-size: 1.8rem;
   font-size: 1.6rem;
   font-size: 1.4rem;
-}
-
-@media (min-width: 1440px) {
-  .App {
-    background-color: red;
-    -ms-grid-columns: [first] 3rem (2rem [col-start] auto [col-end] 2rem)[12] 5rem [end];
-        grid-template-columns: [first] 3rem repeat(12, 2rem [col-start] auto [col-end] 2rem) 5rem [end];
-    -ms-grid-rows: ([row-start] 1.2rem [row-end])[100];
-        grid-template-rows: repeat(100, [row-start] 1.2rem [row-end]);
-  }
-}
-
-@media (min-width: 415px) and (max-width: 1439px) {
-  .App {
-    background-color: blue;
-    -ms-grid-columns: [first] 1.75rem (0.75rem [col-start] auto [col-end] 0.75rem)[12] 2.5rem [end];
-        grid-template-columns: [first] 1.75rem repeat(12, 0.75rem [col-start] auto [col-end] 0.75rem) 2.5rem [end];
-    -ms-grid-rows: ([row-start] 1.2rem [row-end])[100];
-        grid-template-rows: repeat(100, [row-start] 1.2rem [row-end]);
-  }
-}
-
-@media (max-width: 414px) {
-  .App {
-    background-color: green;
-    -ms-grid-columns: [first] 1.75rem (0.75rem [col-start] auto [col-end] 0.75rem)[4] 2.5rem [end];
-        grid-template-columns: [first] 1.75rem repeat(4, 0.75rem [col-start] auto [col-end] 0.75rem) 2.5rem [end];
-    -ms-grid-rows: ([row-start] 1.2rem [row-end])[100];
-        grid-template-rows: repeat(100, [row-start] 1.2rem [row-end]);
-  }
 }
 /*# sourceMappingURL=App.css.map */

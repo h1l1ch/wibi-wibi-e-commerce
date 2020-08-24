@@ -4,16 +4,15 @@
 
 // Nicely centered background image
 @mixin centeredBackgroundImage() {
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: cover;
 }
 
 // GRID TEMPLATE
-@mixin gridTemplate($numberOfColumns, $margin, $gutter, $backgroundColor) {
-    background-color: $backgroundColor;
-    grid-template-columns: [first] $margin - $gutter / 2 repeat($numberOfColumns, $gutter / 2 [col-start] auto [col-end] $gutter / 2) $margin [end];
-    grid-template-rows: repeat(100, [row-start] 1.2rem [row-end]);
+@mixin gridMobileTemplate () {
+
 }
 
 // BEARKPOINTS

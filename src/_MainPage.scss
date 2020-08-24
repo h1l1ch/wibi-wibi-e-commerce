@@ -1,0 +1,26 @@
+@import './variables';
+
+.main-page {
+    display: grid;
+    background-color: $colorWhitish;
+    
+    @include desktop {    
+    }
+    
+    @include tablet {    
+    }
+    
+    @include phone {    
+        grid-template-rows: 2.5rem 7rem auto auto auto 96rem 12rem;
+
+        grid-template-areas:
+            "#{$navigationLogin}" 
+            "#{$navigationLogo}" 
+            "#{$header}"
+            "#{$featured}"
+            "#{$promotion}"
+            "#{$about}"
+            "#{$footer}"
+        ;
+    }
+}

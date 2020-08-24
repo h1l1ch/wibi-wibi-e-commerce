@@ -4,17 +4,21 @@ import NavigationLogo from './NavigationLogo';
 import Header from './Header';
 import Featured from './Featured';
 import Promotion from './Promotion';
+import About from './About';
+import Footer from './Footer';
 
 const MainPage: React.FC = () => {
     
     return (
-        <React.Fragment>
+        <div className="main-page">
             <NavigationLogin/>
             <NavigationLogo/>
             <Header/>
             <Featured/>
             <Promotion/>
-        </React.Fragment>
+            <About/>
+            <Footer/>
+        </div>
     )
 }
 

@@ -1,17 +1,19 @@
 @import './variables';
 
 .promotion-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.905)), url(img/zara-stylish-photo.jpg);
+    grid-area: $promotion;
+    background-image: url(img/zara-stylish-photo.jpg);
     background-color: rgb(108,92,74);
+    background-attachment: fixed;
+
     @include centeredBackgroundImage();
 
     grid-column: 1/end;
     color: $colorWhitish;
-    // display: flex;
-    // flex-direction: column;
 
     .promotion-section__title {
-        font-weight: 400;
+        background-color: rgba(51, 51, 51, 0.5);;
+        font-weight: 300;
         display: inline-block;
         width: 90%;
     }
@@ -24,12 +26,12 @@
     }
 
     @include phone {    
-        grid-row: 131/152;
 
-        .header-section__title {
+        .promotion-section__title {
+            // width: 100%;
+            font-size: 3.4rem;
             margin-top: 20rem;
             margin-left: 2rem;
-            font-size: 300rem;
         }
     };
 };

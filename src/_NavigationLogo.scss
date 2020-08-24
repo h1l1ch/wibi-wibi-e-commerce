@@ -8,6 +8,7 @@
 }
 
 .navigation-logo {
+    grid-area: $navigationLogo;
     background-color: $colorWhitish;
     color: $colorBlackish;
     grid-column: 1/end;
@@ -52,7 +53,6 @@
     }
 
     @include phone {
-        grid-row: 3/9;
         padding: 1.8rem 0;    
     
         .navigation-logo__basket-icon {
