@@ -2,6 +2,8 @@ import React from 'react';
 import NavigationLogin from './NavigationLogin';
 import NavigationLogo from './NavigationLogo';
 import Header from './Header';
+import Featured from './Featured';
+import Promotion from './Promotion';
 
 const MainPage: React.FC = () => {
     
@@ -10,6 +12,8 @@ const MainPage: React.FC = () => {
             <NavigationLogin/>
             <NavigationLogo/>
             <Header/>
+            <Featured/>
+            <Promotion/>
         </React.Fragment>
     )
 }

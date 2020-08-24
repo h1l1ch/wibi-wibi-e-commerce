@@ -1,6 +1,6 @@
 @import './variables';
 
-.header {
+.header-section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.905)), url(img/Header.jpg);
     background-color: rgb(108,92,74);
     @include centeredBackgroundImage();
@@ -10,13 +10,13 @@
     display: flex;
     flex-direction: column;
 
-    .header__promotion {
+    .header-section__title {
         font-weight: 400;
         display: inline-block;
         width: 90%;
     }
 
-    .header__shop-now-btn {
+    .header-section__shop-now-btn {
         text-align: center;
         display: inline-block;
         border-radius: 0.5rem;
@@ -35,13 +35,13 @@
     @include phone {    
         grid-row: 9/49;
 
-        .header__promotion {
+        .header-section__title {
             margin-top: 20rem;
             margin-left: 2rem;
             font-size: 3rem;
         }
 
-        .header__shop-now-btn {
+        .header-section__shop-now-btn {
             width: 10rem;
             margin-left: 2rem;
             font-size: 1.8rem;

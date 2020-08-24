@@ -4,27 +4,19 @@
 
 // Nicely centered background image
 @mixin centeredBackgroundImage() {
-    width: 100%; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100%;
 }
 
-// Grid Template 
+// GRID TEMPLATE
 @mixin gridTemplate($numberOfColumns, $margin, $gutter, $backgroundColor) {
     background-color: $backgroundColor;
     grid-template-columns: [first] $margin - $gutter / 2 repeat($numberOfColumns, $gutter / 2 [col-start] auto [col-end] $gutter / 2) $margin [end];
     grid-template-rows: repeat(100, [row-start] 1.2rem [row-end]);
 }
 
-// @mixin phone-extra-small {
-//     font-size: $phone-font-size;
-
-//     @media (max-width: $tablet-width - 1px) {
-//         @content;
-//     }
-// }
-
+// BEARKPOINTS
 @mixin phone {
     font-size: $phone-font-size;
 
@@ -57,4 +49,64 @@
     }
 }
 
+// ANIMATIONS & KEYFRAMES
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+// CLEARFIX
+%clearfix {
+    *zoom: 1;
+    &:before, &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+}
+
+// VISUALLY HIDE THE ELEMENT
+%visuallyhidden {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}
+
+// SET A REM FONT SIZE WITH PIXEL FALLBACK
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+  }
   
+  @mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
