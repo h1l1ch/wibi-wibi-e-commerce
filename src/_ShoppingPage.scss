@@ -1,6 +1,6 @@
 @import './variables';
 
-.main-page {
+.shopping-page {
     display: grid;
     background-color: $colorWhitish;
     
@@ -18,8 +18,7 @@
             "#{$navigationLogin}" 
             "#{$navigationLogo}" 
             "#{$header}"
-            "#{$featured}"
-            "#{$promotion}"
+            "#{$results}"
             "#{$about}"
             "#{$footer}"
         ;

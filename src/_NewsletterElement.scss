@@ -3,34 +3,55 @@
 
 .newsletter {
     grid-area: $newsLetterElement;
-    grid-column: 1/end;
     color: $colorBlackish;
-    display: grid;
-
+    
+    @include aboutBox();
+    
     p {
         margin-left: 3rem;
         margin-top: -1rem;
     }
 
     input {
+        width: auto;
         margin-left: 3rem;
-        margin-right: 10rem;
+        margin-right: 3rem;
+        margin-bottom: 1rem;
         padding: 0.5rem;
-        border-radius: 5px;
+        border-radius: 0.5rem;
         background-color: #dddddd;
-        border: 1px solid #ccc;
-
+        border: 0.1rem solid #ccc;
+        
         &::placeholder {
             color: #333333;
             font-family: "Montserrat";
         }
     }
-
+    
     button {
-        width: 5rem;
+        width: 15rem;
+        text-transform: uppercase;
+        color: #dddddd;
+        font-family: "Montserrat";
+        margin-left: 3rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: $colorBlackish;
+        border: 0.1rem solid #ccc;
     }
 
-    @include aboutBox();
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style: none;
+        margin-left: -1rem;
+        margin-right: 3rem; 
+
+        li {
+            font-size: $icon * 1.4;
+        }
+    }
 
     @include desktop {    
     }

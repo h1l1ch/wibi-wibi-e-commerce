@@ -2,24 +2,20 @@ import React from 'react';
 import NavigationLogin from './NavigationLogin';
 import NavigationLogo from './NavigationLogo';
 import Header from './Header';
-import Featured from './Featured';
-import Promotion from './Promotion';
-import About from './About';
+import Results from './Results';
 import Footer from './Footer';
 
-const MainPage: React.FC = () => {
+const ShoppingPage: React.FC = () => {
     
     return (
-        <div className="main-page">
+        <div className="shopping-page">
             <NavigationLogin/>
             <NavigationLogo/>
             <Header/>
-            <Featured/>
-            <Promotion/>
-            <About/>
+            <Results/>
             <Footer/>
         </div>
     )
 }
 
-export default MainPage;
+export default ShoppingPage;

@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 // import * as actions from "./store/actions/index";
 import './App.css';
 import MainPage from './MainPage'
+import ShoppingPage from './ShoppingPage'
+
 import { auth } from "./firebase";
 
 const App: React.FC = () => {
@@ -16,6 +18,7 @@ const App: React.FC = () => {
         <Route path="/checkout"/>
         <Route path="/checkout"/> */}
         <Route path="/" exact component={MainPage}/>
+        <Route path="/dresses" component={ShoppingPage}/>
       </Switch>
     </div>
   );

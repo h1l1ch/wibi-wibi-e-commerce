@@ -11,7 +11,9 @@
   .main-page {
     -ms-grid-rows: 2.5rem 7rem auto auto auto 96rem 12rem;
         grid-template-rows: 2.5rem 7rem auto auto auto 96rem 12rem;
-        grid-template-areas: "navLogin navLogin" "navLogo navLogo" "header header" "featured featured" "promotion promotion" "about about" "footer footer";
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        grid-template-areas: "navLogin" "navLogo" "header" "featured" "promotion" "about" "footer";
   }
 }
 
@@ -19,7 +21,6 @@
   grid-area: navLogin;
   background-color: #333333;
   color: #f2f2f2;
-  grid-column: 1/end;
   font-size: 1.8rem;
   font-size: 1.6rem;
   font-size: 1.4rem;
@@ -59,7 +60,6 @@
   grid-area: navLogo;
   background-color: #f2f2f2;
   color: #333333;
-  grid-column: 1/end;
   font-size: 1.8rem;
   font-size: 1.6rem;
   font-size: 1.4rem;
@@ -137,7 +137,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  grid-column: 1/end;
   color: #f2f2f2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -185,7 +184,6 @@
 .featured-section {
   grid-area: featured;
   color: #333333;
-  grid-column: 1/end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,7 +313,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  grid-column: 1/end;
   color: #f2f2f2;
   font-size: 1.8rem;
   font-size: 1.6rem;
@@ -339,10 +336,10 @@
 
 .about-section {
   grid-area: about;
-  grid-column: 1/end;
   color: #333333;
   display: -ms-grid;
   display: grid;
+  overflow: auto;
   font-size: 1.8rem;
   font-size: 1.6rem;
   font-size: 1.4rem;
@@ -350,13 +347,48 @@
 
 @media (max-width: 414px) {
   .about-section {
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
         grid-template-areas: "custCareEl" "aboutEl" "newsLetterEl";
   }
 }
 
+.footer {
+  grid-area: footer;
+  color: #f2f2f2;
+  background-color: #333333;
+  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+  margin-left: -1rem;
+  margin-right: 3rem;
+}
+
+.footer ul li {
+  font-size: 2.8rem;
+}
+
+.footer p {
+  text-align: center;
+}
+
 .customer-care {
   grid-area: custCareEl;
-  grid-column: 1/end;
   color: #333333;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -386,7 +418,7 @@
 
 .customer-care h3::after {
   margin-right: 3rem;
-  width: 30rem;
+  width: auto;
   display: block;
   height: 0.2rem;
   background-color: #333333;
@@ -396,10 +428,7 @@
 
 .about {
   grid-area: aboutEl;
-  grid-column: 1/end;
   color: #333333;
-  display: -ms-grid;
-  display: grid;
   font-size: 1.8rem;
   font-size: 1.6rem;
   font-size: 1.4rem;
@@ -420,7 +449,7 @@
 
 .about h3::after {
   margin-right: 3rem;
-  width: 30rem;
+  width: auto;
   display: block;
   height: 0.2rem;
   background-color: #333333;
@@ -430,13 +459,25 @@
 
 .newsletter {
   grid-area: newsLetterEl;
-  grid-column: 1/end;
   color: #333333;
-  display: -ms-grid;
-  display: grid;
   font-size: 1.8rem;
   font-size: 1.6rem;
   font-size: 1.4rem;
+}
+
+.newsletter h3 {
+  margin-left: 3rem;
+  font-size: 2rem;
+}
+
+.newsletter h3::after {
+  margin-right: 3rem;
+  width: auto;
+  display: block;
+  height: 0.2rem;
+  background-color: #333333;
+  content: " ";
+  margin-top: 1rem;
 }
 
 .newsletter p {
@@ -445,12 +486,14 @@
 }
 
 .newsletter input {
+  width: auto;
   margin-left: 3rem;
-  margin-right: 10rem;
+  margin-right: 3rem;
+  margin-bottom: 1rem;
   padding: 0.5rem;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   background-color: #dddddd;
-  border: 1px solid #ccc;
+  border: 0.1rem solid #ccc;
 }
 
 .newsletter input::-webkit-input-placeholder {
@@ -474,22 +517,34 @@
 }
 
 .newsletter button {
-  width: 5rem;
-}
-
-.newsletter h3 {
+  width: 15rem;
+  text-transform: uppercase;
+  color: #dddddd;
+  font-family: "Montserrat";
   margin-left: 3rem;
-  font-size: 2rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #333333;
+  border: 0.1rem solid #ccc;
 }
 
-.newsletter h3::after {
+.newsletter ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+  margin-left: -1rem;
   margin-right: 3rem;
-  width: 30rem;
-  display: block;
-  height: 0.2rem;
-  background-color: #333333;
-  content: " ";
-  margin-top: 1rem;
+}
+
+.newsletter ul li {
+  font-size: 2.8rem;
 }
 
 html {

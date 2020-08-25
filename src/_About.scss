@@ -2,9 +2,9 @@
 
 .about-section {
     grid-area: $about;
-    grid-column: 1/end;
     color: $colorBlackish;
     display: grid;
+    overflow: auto;
 
     @include desktop {    
     }
@@ -13,6 +13,8 @@
     }
 
     @include phone {    
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 100%;
 
         grid-template-areas:
             "#{$customerCareElement}" 

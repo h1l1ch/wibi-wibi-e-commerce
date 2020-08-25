@@ -1,4 +1,8 @@
 import React from 'react';
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 const NewsletterElement: React.FC= () => {
 
@@ -6,13 +10,13 @@ const NewsletterElement: React.FC= () => {
         <div className="newsletter">
             <h3 className="newsletter-title">Newsletter</h3>
             <p className="newsletter__joining-mailing-list">Join our mailing list</p>
-            <input type="text" className="newsletter__enter-email-input" placeholder="your@email.com"/>
+            <input className="newsletter__enter-email-input" type="text"  placeholder="your@email.com"/>
             <button className="newsletter__submit-email-button">Subscribe</button>
             <ul className="newsletter__social-icons">
-                <li className="newsletter__social-icons__facebook-icon"></li>
-                <li className="newsletter__social-icons__instagram-icon"></li>
-                <li className="newsletter__social-icons__twitter-icon"></li>
-                <li className="newsletter__social-icons__linkedin-icon"></li>
+                <li className="newsletter__social-icons__facebook-icon"><FaFacebookSquare/></li>
+                <li className="newsletter__social-icons__instagram-icon"><FaInstagram/></li>
+                <li className="newsletter__social-icons__twitter-icon"><FaTwitter/></li>
+                <li className="newsletter__social-icons__linkedin-icon"><FaLinkedin/></li>
             </ul>
         </div>
     );

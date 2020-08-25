@@ -3,9 +3,7 @@
 
 .about {
     grid-area: $aboutElement;
-    grid-column: 1/end;
     color: $colorBlackish;
-    display: grid;
 
     .about__quote {
         font-style: italic;
@@ -18,10 +16,10 @@
     @include aboutBox();
 
     @include desktop {    
-    }
+    };
 
     @include tablet {    
-    }
+    };
 
     @include phone {    
     };

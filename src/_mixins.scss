@@ -18,12 +18,11 @@
 
         &::after {
             margin-right: 3rem;
-            width: 30rem;
+            width: auto;
             display: block;
             height: 0.2rem;
-            background-color: #333333;
+            background-color: $colorBlackish;
             content: " ";
-            // margin: 0 auto;
             margin-top: 1rem;
         }
     }
