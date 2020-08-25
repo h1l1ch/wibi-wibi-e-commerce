@@ -10,20 +10,31 @@
     background-size: cover;
 }
 
+// Template for a single About Box
+@mixin aboutBox() {
+    h3 {
+        margin-left: 3rem;
+        font-size: 2rem;
+
+        &::after {
+            margin-right: 3rem;
+            width: 30rem;
+            display: block;
+            height: 0.2rem;
+            background-color: #333333;
+            content: " ";
+            // margin: 0 auto;
+            margin-top: 1rem;
+        }
+    }
+}
+
 // GRID TEMPLATE
 @mixin gridMobileTemplate () {
 
 }
 
 // BEARKPOINTS
-@mixin phone {
-    font-size: $phone-font-size;
-
-    @media (max-width: $tablet-width - 1px) {
-        @content;
-    }
-}
-
 @mixin phone {
     font-size: $phone-font-size;
 

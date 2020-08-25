@@ -11,7 +11,7 @@
   .main-page {
     -ms-grid-rows: 2.5rem 7rem auto auto auto 96rem 12rem;
         grid-template-rows: 2.5rem 7rem auto auto auto 96rem 12rem;
-        grid-template-areas: "navLogin" "navLogo" "header" "featured" "promotion" "about" "footer";
+        grid-template-areas: "navLogin navLogin" "navLogo navLogo" "header header" "featured featured" "promotion promotion" "about about" "footer footer";
   }
 }
 
@@ -335,6 +335,161 @@
     margin-top: 20rem;
     margin-left: 2rem;
   }
+}
+
+.about-section {
+  grid-area: about;
+  grid-column: 1/end;
+  color: #333333;
+  display: -ms-grid;
+  display: grid;
+  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 414px) {
+  .about-section {
+        grid-template-areas: "custCareEl" "aboutEl" "newsLetterEl";
+  }
+}
+
+.customer-care {
+  grid-area: custCareEl;
+  grid-column: 1/end;
+  color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.customer-care ul li:first-of-type {
+  margin-top: -1rem;
+}
+
+.customer-care ul li {
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
+.customer-care h3 {
+  margin-left: 3rem;
+  font-size: 2rem;
+}
+
+.customer-care h3::after {
+  margin-right: 3rem;
+  width: 30rem;
+  display: block;
+  height: 0.2rem;
+  background-color: #333333;
+  content: " ";
+  margin-top: 1rem;
+}
+
+.about {
+  grid-area: aboutEl;
+  grid-column: 1/end;
+  color: #333333;
+  display: -ms-grid;
+  display: grid;
+  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.about .about__quote {
+  font-style: italic;
+}
+
+.about p {
+  margin: 1rem 3rem;
+}
+
+.about h3 {
+  margin-left: 3rem;
+  font-size: 2rem;
+}
+
+.about h3::after {
+  margin-right: 3rem;
+  width: 30rem;
+  display: block;
+  height: 0.2rem;
+  background-color: #333333;
+  content: " ";
+  margin-top: 1rem;
+}
+
+.newsletter {
+  grid-area: newsLetterEl;
+  grid-column: 1/end;
+  color: #333333;
+  display: -ms-grid;
+  display: grid;
+  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.newsletter p {
+  margin-left: 3rem;
+  margin-top: -1rem;
+}
+
+.newsletter input {
+  margin-left: 3rem;
+  margin-right: 10rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: #dddddd;
+  border: 1px solid #ccc;
+}
+
+.newsletter input::-webkit-input-placeholder {
+  color: #333333;
+  font-family: "Montserrat";
+}
+
+.newsletter input:-ms-input-placeholder {
+  color: #333333;
+  font-family: "Montserrat";
+}
+
+.newsletter input::-ms-input-placeholder {
+  color: #333333;
+  font-family: "Montserrat";
+}
+
+.newsletter input::placeholder {
+  color: #333333;
+  font-family: "Montserrat";
+}
+
+.newsletter button {
+  width: 5rem;
+}
+
+.newsletter h3 {
+  margin-left: 3rem;
+  font-size: 2rem;
+}
+
+.newsletter h3::after {
+  margin-right: 3rem;
+  width: 30rem;
+  display: block;
+  height: 0.2rem;
+  background-color: #333333;
+  content: " ";
+  margin-top: 1rem;
 }
 
 html {

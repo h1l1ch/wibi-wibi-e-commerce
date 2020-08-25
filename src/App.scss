@@ -12,6 +12,9 @@
 @import './Promotion';
 @import './About';
 @import './Footer';
+@import './CustomerCareElement';
+@import './AboutElement';
+@import './NewsletterElement';
 
 html {
   background-color: #fff;
@@ -24,7 +27,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat"
+  font-family: "Montserrat";
 }
 
 .App {

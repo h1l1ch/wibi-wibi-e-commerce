@@ -1,0 +1,44 @@
+@import './variables';
+@import './mixins';
+
+.newsletter {
+    grid-area: $newsLetterElement;
+    grid-column: 1/end;
+    color: $colorBlackish;
+    display: grid;
+
+    p {
+        margin-left: 3rem;
+        margin-top: -1rem;
+    }
+
+    input {
+        margin-left: 3rem;
+        margin-right: 10rem;
+        padding: 0.5rem;
+        border-radius: 5px;
+        background-color: #dddddd;
+        border: 1px solid #ccc;
+
+        &::placeholder {
+            color: #333333;
+            font-family: "Montserrat";
+        }
+    }
+
+    button {
+        width: 5rem;
+    }
+
+    @include aboutBox();
+
+    @include desktop {    
+    }
+
+    @include tablet {    
+    }
+
+    @include phone {
+
+    };
+};

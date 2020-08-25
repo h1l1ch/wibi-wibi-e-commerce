@@ -1,10 +1,21 @@
 @import './variables';
+@import './mixins';
 
-.about-section {
-    grid-area: $about;
+.about {
+    grid-area: $aboutElement;
     grid-column: 1/end;
     color: $colorBlackish;
     display: grid;
+
+    .about__quote {
+        font-style: italic;
+    }
+
+    p {
+        margin: 1rem 3rem;
+    }
+
+    @include aboutBox();
 
     @include desktop {    
     }
@@ -13,11 +24,5 @@
     }
 
     @include phone {    
-
-        grid-template-areas:
-            "#{$customerCareElement}" 
-            "#{$aboutElement}" 
-            "#{$newsLetterElement}"
-        ;
     };
 };
