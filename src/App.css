@@ -11,7 +11,7 @@
   .main-page {
     -ms-grid-rows: 2.5rem 7rem auto auto auto 96rem 12rem;
         grid-template-rows: 2.5rem 7rem auto auto auto 96rem 12rem;
-        grid-template-areas: "navLogin navLogin" "navLogo navLogo" "header header" "featured featured" "promotion promotion" "about about" "footer footer";
+        grid-template-areas: "navLogin" "navLogo" "header" "featured" "promotion" "about" "footer";
   }
 }
 
