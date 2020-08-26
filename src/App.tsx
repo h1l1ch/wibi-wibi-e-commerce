@@ -18,7 +18,7 @@ const App: React.FC = () => {
         <Route path="/checkout"/>
         <Route path="/checkout"/> */}
         <Route path="/" exact component={MainPage}/>
-        <Route path="/dresses" component={ShoppingPage}/>
+        <Route path="/shopping-page" component={ShoppingPage}/>
       </Switch>
     </div>
   );

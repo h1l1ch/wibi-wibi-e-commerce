@@ -547,6 +547,61 @@
   font-size: 2.8rem;
 }
 
+.shopping-page {
+  display: -ms-grid;
+  display: grid;
+  background-color: #f2f2f2;
+  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 414px) {
+  .shopping-page {
+    -ms-grid-rows: 2.5rem 7rem auto auto auto 96rem 12rem;
+        grid-template-rows: 2.5rem 7rem auto auto auto 96rem 12rem;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        grid-template-areas: "navLogin" "navLogo" "header" "results" "about" "footer";
+  }
+}
+
+.results-section {
+  grid-area: results;
+  color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Montserrat";
+  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.results-section .results-section__sortBy {
+  margin: auto;
+}
+
+@media (max-width: 414px) {
+  .results-section .results-section__sortBy {
+    margin: 2rem auto;
+    width: 90%;
+  }
+  .results-section .results-section__row {
+    margin: 0 2rem;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+    row-gap: 1.5rem;
+        grid-template-areas: "shopEl0 shopEl1";
+  }
+}
+
 html {
   background-color: #fff;
   color: #555;

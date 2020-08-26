@@ -1,24 +1,13 @@
 @import './variables';
 
 .results-section {
-
     grid-area: $results;
     color: $colorBlackish;
-
     display: flex;
     flex-direction: column;
 
-    .results-section__title {
-        text-align: center;
-        font-weight: 400;
-        display: inline-block;
-        width: 90%;
-    }
-    
-    .results-section__row {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        display: grid;
+    .results-section__sortBy {
+        margin: auto;
     }
 
     @include desktop {    
@@ -29,20 +18,17 @@
 
     @include phone {    
 
+        .results-section__sortBy {
+            margin: 2rem auto;
+            width: 90%;
+        }
+
         .results-section__row {
             margin: 0 2rem;
             grid-template-columns: 1fr 1fr;
             column-gap: 1rem;
             row-gap: 1.5rem;
             grid-template-areas: "#{$shoppingElement0} #{$shoppingElement1}";
-        }
-
-        .results-section__title {
-            width: 100%;
-            text-align: center;
-            margin-top: 5rem;
-            // margin-left: 2rem;
-            font-size: 3rem;
         }
     };
 };
