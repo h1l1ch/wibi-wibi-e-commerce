@@ -11,7 +11,7 @@
     }
     
     @include phone {    
-        grid-template-rows: 2.5rem 7rem auto auto auto 96rem 12rem;
+        grid-template-rows: 2.5rem 7rem auto auto auto auto auto;
         grid-template-columns: 100%;
 
         grid-template-areas:

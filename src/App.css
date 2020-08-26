@@ -1,19 +1,98 @@
-.main-page {
+.shopping-element-0 {
+  grid-area: shopEl0;
+  background-color: #f2f2f2;
+  color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.shopping-element-0 .shopping-element__photo {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 414px) {
+  .shopping-element-0 .shopping-element__info {
+    margin: 1rem 0 3rem 0;
+  }
+  .shopping-element-0 .shopping-element__info h5 {
+    margin: 0.5rem 0;
+    font-weight: 400;
+  }
+  .shopping-element-0 .shopping-element__info .shopping-element__info__brand-name {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.shopping-element-1 {
+  grid-area: shopEl1;
+  background-color: #f2f2f2;
+  color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.shopping-element-1 .shopping-element__photo {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 414px) {
+  .shopping-element-1 .shopping-element__info {
+    margin: 1rem 0 3rem 0;
+  }
+  .shopping-element-1 .shopping-element__info h5 {
+    margin: 0.5rem 0;
+    font-weight: 400;
+  }
+  .shopping-element-1 .shopping-element__info .shopping-element__info__brand-name {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.shopping-elements-row {
+  margin-left: 1rem;
+  margin-right: 1rem;
   display: -ms-grid;
   display: grid;
-  background-color: #f2f2f2;
   font-size: 1.8rem;
   font-size: 1.6rem;
   font-size: 1.4rem;
 }
 
 @media (max-width: 414px) {
-  .main-page {
-    -ms-grid-rows: 2.5rem 7rem auto auto auto 96rem 12rem;
-        grid-template-rows: 2.5rem 7rem auto auto auto 96rem 12rem;
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
-        grid-template-areas: "navLogin" "navLogo" "header" "featured" "promotion" "about" "footer";
+  .shopping-elements-row {
+    margin: 0 2rem;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
+    row-gap: 1.5rem;
+        grid-template-areas: "shopEl0 shopEl1";
   }
 }
 
@@ -181,165 +260,6 @@
   }
 }
 
-.featured-section {
-  grid-area: featured;
-  color: #333333;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 1.8rem;
-  font-size: 1.6rem;
-  font-size: 1.4rem;
-}
-
-.featured-section .featured-section__title {
-  text-align: center;
-  font-weight: 400;
-  display: inline-block;
-  width: 90%;
-}
-
-@media (max-width: 414px) {
-  .featured-section .featured-section__title {
-    width: 100%;
-    text-align: center;
-    margin-top: 5rem;
-    font-size: 3rem;
-  }
-}
-
-.shopping-element-0 {
-  grid-area: shopEl0;
-  background-color: #f2f2f2;
-  color: #333333;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 1.8rem;
-  font-size: 1.6rem;
-  font-size: 1.4rem;
-}
-
-.shopping-element-0 .shopping-element__photo {
-  max-width: 100%;
-  height: auto;
-}
-
-@media (max-width: 414px) {
-  .shopping-element-0 .shopping-element__info {
-    margin: 1rem 0 3rem 0;
-  }
-  .shopping-element-0 .shopping-element__info h5 {
-    margin: 0.5rem 0;
-    font-weight: 400;
-  }
-  .shopping-element-0 .shopping-element__info .shopping-element__info__brand-name {
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-}
-
-.shopping-element-1 {
-  grid-area: shopEl1;
-  background-color: #f2f2f2;
-  color: #333333;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 1.8rem;
-  font-size: 1.6rem;
-  font-size: 1.4rem;
-}
-
-.shopping-element-1 .shopping-element__photo {
-  max-width: 100%;
-  height: auto;
-}
-
-@media (max-width: 414px) {
-  .shopping-element-1 .shopping-element__info {
-    margin: 1rem 0 3rem 0;
-  }
-  .shopping-element-1 .shopping-element__info h5 {
-    margin: 0.5rem 0;
-    font-weight: 400;
-  }
-  .shopping-element-1 .shopping-element__info .shopping-element__info__brand-name {
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-}
-
-.shopping-elements-row {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  display: -ms-grid;
-  display: grid;
-  font-size: 1.8rem;
-  font-size: 1.6rem;
-  font-size: 1.4rem;
-}
-
-@media (max-width: 414px) {
-  .shopping-elements-row {
-    margin: 0 2rem;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -webkit-column-gap: 1rem;
-            column-gap: 1rem;
-    row-gap: 1.5rem;
-        grid-template-areas: "shopEl0 shopEl1";
-  }
-}
-
-.promotion-section {
-  grid-area: promotion;
-  background-image: url(img/zara-stylish-photo.jpg);
-  background-color: #6c5c4a;
-  background-attachment: fixed;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #f2f2f2;
-  font-size: 1.8rem;
-  font-size: 1.6rem;
-  font-size: 1.4rem;
-}
-
-.promotion-section .promotion-section__title {
-  background-color: rgba(51, 51, 51, 0.5);
-  font-weight: 300;
-  display: inline-block;
-  width: 90%;
-}
-
-@media (max-width: 414px) {
-  .promotion-section .promotion-section__title {
-    font-size: 3.4rem;
-    margin-top: 20rem;
-    margin-left: 2rem;
-  }
-}
-
 .about-section {
   grid-area: about;
   color: #333333;
@@ -359,38 +279,6 @@
         grid-template-columns: 100%;
         grid-template-areas: "custCareEl" "aboutEl" "newsLetterEl";
   }
-}
-
-.footer {
-  grid-area: footer;
-  color: #f2f2f2;
-  background-color: #333333;
-  font-size: 1.8rem;
-  font-size: 1.6rem;
-  font-size: 1.4rem;
-}
-
-.footer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  list-style: none;
-  margin-left: -1rem;
-  margin-right: 3rem;
-}
-
-.footer ul li {
-  font-size: 2.8rem;
-}
-
-.footer p {
-  text-align: center;
 }
 
 .customer-care {
@@ -553,6 +441,118 @@
   font-size: 2.8rem;
 }
 
+.footer {
+  grid-area: footer;
+  color: #f2f2f2;
+  background-color: #333333;
+  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+  margin-left: -1rem;
+  margin-right: 3rem;
+}
+
+.footer ul li {
+  font-size: 2.8rem;
+}
+
+.footer p {
+  text-align: center;
+}
+
+.main-page {
+  display: -ms-grid;
+  display: grid;
+  background-color: #f2f2f2;
+  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 414px) {
+  .main-page {
+    -ms-grid-rows: 2.5rem 7rem auto auto auto 96rem 12rem;
+        grid-template-rows: 2.5rem 7rem auto auto auto 96rem 12rem;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        grid-template-areas: "navLogin" "navLogo" "header" "featured" "promotion" "about" "footer";
+  }
+}
+
+.featured-section {
+  grid-area: featured;
+  color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.featured-section .featured-section__title {
+  text-align: center;
+  font-weight: 400;
+  display: inline-block;
+  width: 90%;
+}
+
+@media (max-width: 414px) {
+  .featured-section .featured-section__title {
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 3rem;
+  }
+}
+
+.promotion-section {
+  grid-area: promotion;
+  background-image: url(img/zara-stylish-photo.jpg);
+  background-color: #6c5c4a;
+  background-attachment: fixed;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #f2f2f2;
+  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.promotion-section .promotion-section__title {
+  background-color: rgba(51, 51, 51, 0.5);
+  font-weight: 300;
+  display: inline-block;
+  width: 90%;
+}
+
+@media (max-width: 414px) {
+  .promotion-section .promotion-section__title {
+    font-size: 3.4rem;
+    margin-top: 20rem;
+    margin-left: 2rem;
+  }
+}
+
 .shopping-page {
   display: -ms-grid;
   display: grid;
@@ -564,8 +564,8 @@
 
 @media (max-width: 414px) {
   .shopping-page {
-    -ms-grid-rows: 2.5rem 7rem auto auto auto 96rem 12rem;
-        grid-template-rows: 2.5rem 7rem auto auto auto 96rem 12rem;
+    -ms-grid-rows: 2.5rem 7rem auto auto auto auto auto;
+        grid-template-rows: 2.5rem 7rem auto auto auto auto auto;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
         grid-template-areas: "navLogin" "navLogo" "header" "results" "about" "footer";
@@ -598,6 +598,10 @@
   border-radius: 0.5rem;
   background-color: #dddddd;
   border: 0.1rem solid #ccc;
+}
+
+.results-section .results-section__pagination-element {
+  margin: 3rem auto;
 }
 
 @media (max-width: 414px) {

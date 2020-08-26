@@ -2,20 +2,24 @@
 @import './mixins';
 @import './variables';
 
-// MAIN PAGE
-@import './MainPage';
+// SHOPPING RELATED COMPONENTS
+@import './ShoppingElement';
+@import './ShoppingElementsRow';
+
+// REUSABLE COMPONENTS
 @import './NavigationLogin';
 @import './NavigationLogo';
 @import './Header';
-@import './Featured';
-@import './ShoppingElement';
-@import './ShoppingElementsRow';
-@import './Promotion';
 @import './About';
-@import './Footer';
 @import './CustomerCareElement';
 @import './AboutElement';
 @import './NewsletterElement';
+@import './Footer';
+
+// MAIN PAGE
+@import './MainPage';
+@import './Featured';
+@import './Promotion';
 
 // SHOPPING PAGE
 @import './ShoppingPage';

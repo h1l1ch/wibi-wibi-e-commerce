@@ -19,6 +19,10 @@
         border: 0.1rem solid #ccc;
     }
 
+    .results-section__pagination-element {
+        margin: 3rem auto;
+    }
+
     @include desktop {    
     }
 

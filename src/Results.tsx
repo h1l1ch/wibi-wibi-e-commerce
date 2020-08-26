@@ -19,7 +19,7 @@ const Results: React.FC= () => {
             <ShoppingElementsRow/>
             <ShoppingElementsRow/>
             <ShoppingElementsRow/>
-            <Pagination count={10} shape="rounded" />
+            <Pagination count={10} shape="rounded" className="results-section__pagination-element"/>
         </section>
     );
 };
