@@ -29,8 +29,8 @@
 }
 
 // GRID TEMPLATE
-@mixin gridMobileTemplate () {
-
+@mixin gridShoppingElementsMobileTemplate ($shoppingElement0, $shoppingElement1) {
+    grid-template-areas: "#{$shoppingElement0} #{$shoppingElement1}";
 }
 
 // BEARKPOINTS

@@ -1,41 +1,24 @@
 import React from 'react';
-import ShoppingElement from './ShoppingElement';
+import ShoppingElementsRow from './ShoppingElementsRow';
 import { Pagination } from '@material-ui/lab';
-import { Select } from '@material-ui/core';
-import { MenuItem } from '@material-ui/core';
-
-const ids = [0, 1];
-
-// const listedElementsStyles = {
-//     fontFamily: "Montserrat"
-// };
 
 const Results: React.FC= () => {
 
     return (
         <section className="results-section">
-            <Select name="SortBy" className="results-section__sortBy">
-                <MenuItem style = {listedElementsStyles} value="manual">Featured</MenuItem>
-                <MenuItem style = {listedElementsStyles} value="created-ascending">Date, old to new</MenuItem>
-                <MenuItem style = {listedElementsStyles} value="best-selling">Best Selling</MenuItem>
-                <MenuItem style = {listedElementsStyles} value="title-ascending">Alphabetically, A-Z</MenuItem>
-                <MenuItem style = {listedElementsStyles} value="title-descending">Alphabetically, Z-A</MenuItem>
-                <MenuItem style = {listedElementsStyles} value="price-ascending">Price, low to high</MenuItem>
-                <MenuItem style = {listedElementsStyles} value="price-descending">Price, high to low</MenuItem>
-                <MenuItem style = {listedElementsStyles} value="created-descending">Date, new to old</MenuItem>
-            </Select>
-            <div className="results-section__row">
-                <ShoppingElement id = {ids[0]}/>
-                <ShoppingElement id = {ids[1]}/>
-            </div>
-            <div className="results-section__row">
-                <ShoppingElement id = {ids[0]}/>
-                <ShoppingElement id = {ids[1]}/>
-            </div>
-            <div className="results-section__row">
-                <ShoppingElement id = {ids[0]}/>
-                <ShoppingElement id = {ids[1]}/>
-            </div>
+            <select name="SortBy" className="results-section__sortBy">
+                <option value="created-ascending">Date, old to new</option>
+                <option value="manual">Featured</option>
+                <option value="best-selling">Best Selling</option>
+                <option value="title-ascending">Alphabetically, A-Z</option>
+                <option value="title-descending">Alphabetically, Z-A</option>
+                <option value="price-ascending">Price, low to high</option>
+                <option value="price-descending">Price, high to low</option>
+                <option value="created-descending">Date, new to old</option>
+            </select>
+            <ShoppingElementsRow/>
+            <ShoppingElementsRow/>
+            <ShoppingElementsRow/>
             <Pagination count={10} shape="rounded" />
         </section>
     );
