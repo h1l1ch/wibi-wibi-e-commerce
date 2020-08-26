@@ -1,0 +1,33 @@
+@import './variables';
+
+.featured-section {
+
+    grid-area: $featured;
+    color: $colorBlackish;
+
+    display: flex;
+    flex-direction: column;
+
+    .featured-section__title {
+        text-align: center;
+        font-weight: 400;
+        display: inline-block;
+        width: 90%;
+    }
+
+    @include desktop {    
+    }
+
+    @include tablet {    
+    }
+
+    @include phone {    
+
+        .featured-section__title {
+            width: 100%;
+            text-align: center;
+            margin-top: 5rem;
+            font-size: 3rem;
+        }
+    };
+};

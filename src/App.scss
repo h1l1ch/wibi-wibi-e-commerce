@@ -1,9 +1,25 @@
 // Imports
 @import './mixins';
 @import './variables';
+
+// MAIN PAGE
+@import './MainPage';
 @import './NavigationLogin';
 @import './NavigationLogo';
 @import './Header';
+@import './Featured';
+@import './ShoppingElement';
+@import './ShoppingElementsRow';
+@import './Promotion';
+@import './About';
+@import './Footer';
+@import './CustomerCareElement';
+@import './AboutElement';
+@import './NewsletterElement';
+
+// SHOPPING PAGE
+@import './ShoppingPage';
+@import './Results';
 
 html {
   background-color: #fff;
@@ -16,22 +32,18 @@ html {
 }
 
 body {
-  font-family: "Montserrat"
+  font-family: "Montserrat";
 }
 
 .App {
-  display: grid;
   
   @include desktop {    
-    @include gridTemplate(12, 5rem, 4.0rem, red);
   }
 
   @include tablet {    
-    @include gridTemplate(12, 2.5rem, 1.5rem, blue);
   }
 
   @include phone {    
-    @include gridTemplate(4, 2.5rem, 1.5rem, green);
   }
 }
 

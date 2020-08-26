@@ -8,9 +8,9 @@
 }
 
 .navigation-logo {
+    grid-area: $navigationLogo;
     background-color: $colorWhitish;
     color: $colorBlackish;
-    grid-column: 1/end;
 
     ul {
         margin: 0;
@@ -18,7 +18,7 @@
         list-style: none;
         width: 100%;
         height: 100%;
-        vertical-align: center;
+        display: flex;
 
         li {
             display: inline-block;
@@ -30,6 +30,7 @@
     }
 
     .navigation-logo__logo {
+        width: 100%;
         text-align: center;
         font-weight: 700;
     }
@@ -51,16 +52,15 @@
     }
 
     @include phone {
-        grid-row: 3/9;
-        padding: 1.5rem 0;    
+        padding: 1.8rem 0;    
     
         .navigation-logo__basket-icon {
             @include navigationIcon(0rem, 2rem);
         };
 
         .navigation-logo__logo {
-            margin-left: 2rem;
-            font-size: 3.4rem;
+            padding: 0.1rem;
+            font-size: 2.8rem;
         };
     
         .navigation-logo__burger-icon {

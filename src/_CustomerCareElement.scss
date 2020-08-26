@@ -1,0 +1,29 @@
+@import './variables';
+
+.customer-care {
+    grid-area: $customerCareElement;
+    color: $colorBlackish;
+    display: flex;
+    flex-direction: column;
+    
+    ul {
+        li:first-of-type {
+            margin-top: -1rem;
+        }
+        li {
+            text-transform: uppercase;
+            margin: 1rem 0;
+        }
+    }
+
+    @include aboutBox();
+
+    @include desktop {    
+    }
+
+    @include tablet {    
+    }
+
+    @include phone {    
+    };
+};

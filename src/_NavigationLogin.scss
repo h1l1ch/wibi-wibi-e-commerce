@@ -1,9 +1,9 @@
 @import './variables';
 
 .navigation-login {
+    grid-area: $navigationLogin;
     background-color: $colorBlackish;
     color: $colorWhitish;
-    grid-column: 1/end;
 
     ul {
         display: flex;
@@ -24,7 +24,6 @@
     }
 
     @include phone {    
-        grid-row: 1/3;
 
         ul {
             margin-right: 2.5rem;

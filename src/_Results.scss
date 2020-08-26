@@ -1,0 +1,35 @@
+@import './variables';
+
+.results-section {
+    grid-area: $results;
+    color: $colorBlackish;
+    display: flex;
+    flex-direction: column;
+
+    .results-section__sortBy {
+        margin: auto;
+        font-family: "Montserrat";
+        width: auto;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: #dddddd;
+        border: 0.1rem solid #ccc;
+    }
+
+    @include desktop {    
+    }
+
+    @include tablet {    
+    }
+
+    @include phone {    
+
+        .results-section__sortBy {
+            margin: 2rem auto;
+            width: 90%;
+        }
+    };
+};

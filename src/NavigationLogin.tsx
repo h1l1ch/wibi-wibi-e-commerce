@@ -2,12 +2,12 @@ import React from 'react'
 
 const NavigationLogin: React.FC = () =>  {
     return (
-        <div className="navigation-login">
+        <nav className="navigation-login">
             <ul>
                 <li>login</li>
                 <li>create account</li>
             </ul>
-        </div>
+        </nav>
     )
 }
 

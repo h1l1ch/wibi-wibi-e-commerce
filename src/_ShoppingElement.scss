@@ -1,0 +1,54 @@
+@import './variables';
+
+
+@mixin shoppingElement () {
+    background-color: $colorWhitish;
+    color: $colorBlackish;
+    
+    display: flex;
+    flex-direction: column;
+    // object-fit: fill;
+    // width: 100%;
+    align-items: center;
+    // margin-left: auto;
+    // margin-right: auto;
+
+    .shopping-element__photo {
+        max-width: 100%;
+        height: auto;
+    }
+
+    
+    @include desktop {    
+    }
+    
+    @include tablet {    
+    }
+    
+    @include phone { 
+
+        .shopping-element__info {
+            margin: 1rem 0 3rem 0;
+    
+            h5 {
+                margin: 0.5rem 0;
+                font-weight: 400;
+            }
+
+            .shopping-element__info__brand-name {
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+    };
+};
+
+.shopping-element-0 {
+    grid-area: $shoppingElement0;
+    @include shoppingElement();
+};
+
+.shopping-element-1 {
+    grid-area: $shoppingElement1;
+    @include shoppingElement();
+};

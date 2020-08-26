@@ -1,0 +1,26 @@
+@import './variables';
+@import './mixins';
+
+.about {
+    grid-area: $aboutElement;
+    color: $colorBlackish;
+
+    .about__quote {
+        font-style: italic;
+    }
+
+    p {
+        margin: 1rem 3rem;
+    }
+
+    @include aboutBox();
+
+    @include desktop {    
+    };
+
+    @include tablet {    
+    };
+
+    @include phone {    
+    };
+};

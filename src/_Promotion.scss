@@ -1,0 +1,36 @@
+@import './variables';
+
+.promotion-section {
+    grid-area: $promotion;
+    background-image: url(img/zara-stylish-photo.jpg);
+    background-color: rgb(108,92,74);
+    background-attachment: fixed;
+
+    @include centeredBackgroundImage();
+
+    color: $colorWhitish;
+
+    .promotion-section__title {
+        background-color: rgba(51, 51, 51, 0.5);;
+        font-weight: 300;
+        display: inline-block;
+        width: 90%;
+    }
+
+
+    @include desktop {    
+    }
+
+    @include tablet {    
+    }
+
+    @include phone {    
+
+        .promotion-section__title {
+            // width: 100%;
+            font-size: 3.4rem;
+            margin-top: 20rem;
+            margin-left: 2rem;
+        }
+    };
+};

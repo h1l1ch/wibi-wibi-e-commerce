@@ -4,19 +4,36 @@
 
 // Nicely centered background image
 @mixin centeredBackgroundImage() {
-    width: 100%; 
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
-// Grid Template 
-@mixin gridTemplate($numberOfColumns, $margin, $gutter, $backgroundColor) {
-    background-color: $backgroundColor;
-    grid-template-columns: [first] $margin - $gutter / 2 repeat($numberOfColumns, $gutter / 2 [col-start] auto [col-end] $gutter / 2) $margin [end];
-    grid-template-rows: repeat(100, [row-start] 1.2rem [row-end]);
+// Template for a single About Box
+@mixin aboutBox() {
+    h3 {
+        margin-left: 3rem;
+        font-size: 2rem;
+
+        &::after {
+            margin-right: 3rem;
+            width: auto;
+            display: block;
+            height: 0.2rem;
+            background-color: $colorBlackish;
+            content: " ";
+            margin-top: 1rem;
+        }
+    }
 }
 
+// GRID TEMPLATE
+@mixin gridShoppingElementsMobileTemplate ($shoppingElement0, $shoppingElement1) {
+    grid-template-areas: "#{$shoppingElement0} #{$shoppingElement1}";
+}
+
+// BEARKPOINTS
 @mixin phone {
     font-size: $phone-font-size;
 
@@ -41,4 +58,64 @@
     }
 }
 
+// ANIMATIONS & KEYFRAMES
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+// CLEARFIX
+%clearfix {
+    *zoom: 1;
+    &:before, &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+}
+
+// VISUALLY HIDE THE ELEMENT
+%visuallyhidden {
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+}
+
+// SET A REM FONT SIZE WITH PIXEL FALLBACK
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+  }
   
+  @mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}

@@ -1,0 +1,22 @@
+@import './variables';
+
+.shopping-elements-row {
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: grid;
+
+    @include desktop {    
+    }
+
+    @include tablet {    
+    }
+
+    @include phone {    
+        margin: 0 2rem;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+        row-gap: 1.5rem;
+        @include gridShoppingElementsMobileTemplate ($shoppingElement0, $shoppingElement1)
+    };
+}

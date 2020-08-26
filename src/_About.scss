@@ -1,0 +1,25 @@
+@import './variables';
+
+.about-section {
+    grid-area: $about;
+    color: $colorBlackish;
+    display: grid;
+    overflow: auto;
+
+    @include desktop {    
+    }
+
+    @include tablet {    
+    }
+
+    @include phone {    
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 100%;
+
+        grid-template-areas:
+            "#{$customerCareElement}" 
+            "#{$aboutElement}" 
+            "#{$newsLetterElement}"
+        ;
+    };
+};
