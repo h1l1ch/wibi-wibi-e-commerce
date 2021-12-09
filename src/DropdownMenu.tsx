@@ -4,7 +4,7 @@ import DropdownMenuElement from './DropdownMenuElement';
 const DropdownMenu: React.FC = () => {
 
     return (
-        <ul className="dropdown-menu">
+        <ul className="dropdown-menu visible">
             <DropdownMenuElement>Shop</DropdownMenuElement>
             <DropdownMenuElement>%Featured%</DropdownMenuElement>
             <DropdownMenuElement>Staff Edit</DropdownMenuElement>
