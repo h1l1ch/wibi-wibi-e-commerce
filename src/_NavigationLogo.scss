@@ -11,6 +11,9 @@
     grid-area: $navigationLogo;
     background-color: $colorWhitish;
     color: $colorBlackish;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
     ul {
         margin: 0;
@@ -52,7 +55,8 @@
     }
 
     @include phone {
-        padding: 1.8rem 0;    
+        padding: 1.8rem 0;
+        margin: 2rem 0;    
     
         .navigation-logo__basket-icon {
             @include navigationIcon(0rem, 2rem);

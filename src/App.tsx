@@ -5,8 +5,7 @@ import { connect } from "react-redux";
 import './App.css';
 import MainPage from './MainPage'
 import ShoppingPage from './ShoppingPage'
-
-import { auth } from "./firebase";
+// import { auth } from "./firebase";
 
 const App: React.FC = () => {
 
@@ -24,16 +23,16 @@ const App: React.FC = () => {
   );
 }
 
-const mapStateToProps = (state?: number) => {
-  return {
+// const mapStateToProps = (state?: number) => {
+//   return {
 
-  }
-}
+//   }
+// }
 
-const mapDispatchToProps = (dispatch?: number) => {
-  return {
+// const mapDispatchToProps = (dispatch?: number) => {
+//   return {
 
-  }
-}
+//   }
+// }
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
+export default App;

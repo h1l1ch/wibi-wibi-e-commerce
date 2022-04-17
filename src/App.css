@@ -100,6 +100,9 @@
   grid-area: navLogin;
   background-color: #333333;
   color: #f2f2f2;
+  position: fixed;
+  top: 0;
+  width: 100%;
   font-size: 1.8rem;
   font-size: 1.6rem;
   font-size: 1.4rem;
@@ -139,6 +142,9 @@
   grid-area: navLogo;
   background-color: #f2f2f2;
   color: #333333;
+  position: fixed;
+  top: 0;
+  width: 100%;
   font-size: 1.8rem;
   font-size: 1.6rem;
   font-size: 1.4rem;
@@ -188,6 +194,7 @@
 @media (max-width: 414px) {
   .navigation-logo {
     padding: 1.8rem 0;
+    margin: 2rem 0;
   }
   .navigation-logo .navigation-logo__basket-icon {
     margin-top: 1rem;
@@ -209,8 +216,8 @@
 
 .header-section {
   grid-area: header;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.905))), url(img/Header.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.905)), url(img/Header.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.905))), url(img/HeaderCropped.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.905)), url(img/HeaderCropped.jpg);
   background-color: #6c5c4a;
   width: 100%;
   background-position: center;
@@ -380,6 +387,7 @@
 }
 
 .newsletter input {
+  grid-area: newsInput;
   width: auto;
   margin-left: 3rem;
   margin-right: 3rem;
@@ -411,6 +419,7 @@
 }
 
 .newsletter button {
+  grid-area: newsBtn;
   width: 15rem;
   text-transform: uppercase;
   color: #dddddd;

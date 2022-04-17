@@ -1,9 +1,8 @@
 import React from 'react'
-import { connect } from "react-redux";
 
-const NavigationLogin: React.FC = (props) =>  {
+const NavigationLogin: React.FC = () =>  {
     return (
-        <nav className={["navigation-login", `${props.isSticky ? 'sticky' : ''}`].join(' ')}>
+        <nav className="navigation-login">
             <ul>
                 <li>login</li>
                 <li>create account</li>
@@ -12,11 +11,4 @@ const NavigationLogin: React.FC = (props) =>  {
     )
 }
 
-// Function responsible for passing state to the reducer
-const mapStateToProps = (state) => {
-    return {
-      isSticky: state.navigation.isSticky
-    };
-};
-
-export default connect(mapStateToProps)(NavigationLogin);
+export default NavigationLogin;

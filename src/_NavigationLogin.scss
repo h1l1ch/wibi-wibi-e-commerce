@@ -1,9 +1,13 @@
 @import './variables';
+@import './mixins';
 
 .navigation-login {
     grid-area: $navigationLogin;
     background-color: $colorBlackish;
     color: $colorWhitish;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
     ul {
         display: flex;

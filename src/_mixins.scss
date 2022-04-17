@@ -28,6 +28,13 @@
     }
 }
 
+// Sticky position
+@mixin sticky() {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
 // GRID TEMPLATE
 @mixin gridShoppingElementsMobileTemplate ($shoppingElement0, $shoppingElement1) {
     grid-template-areas: "#{$shoppingElement0} #{$shoppingElement1}";
