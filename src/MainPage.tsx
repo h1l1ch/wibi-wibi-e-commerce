@@ -10,7 +10,7 @@ import Footer from './Footer';
 const MainPage: React.FC = () => {
     
     return (
-        <div className="main-page">
+        <div className="home-page">
             <NavigationLogin/>
             <NavigationLogo/>
             <Header/>
